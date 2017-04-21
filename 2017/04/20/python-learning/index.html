@@ -22,7 +22,7 @@
 <meta property="og:url" content="http://yoursite.com/2017/04/20/python-learning/index.html">
 <meta property="og:site_name" content="软件测试学习历程">
 <meta property="og:description" content="Python是用来编写应用程序的高级编程语言。举例：基本输入/输出：  print()在括号中加上字符串，就可以向屏幕上输出指定的文字。  input()可以让你显示一个字符串来提示用户（‘name=input(please enter your name:)’）">
-<meta property="og:updated_time" content="2017-04-21T03:35:18.000Z">
+<meta property="og:updated_time" content="2017-04-21T06:58:28.657Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python 学习笔记">
 <meta name="twitter:description" content="Python是用来编写应用程序的高级编程语言。举例：基本输入/输出：  print()在括号中加上字符串，就可以向屏幕上输出指定的文字。  input()可以让你显示一个字符串来提示用户（‘name=input(please enter your name:)’）">
@@ -137,13 +137,13 @@
                 <div class="tips-box hide">
                     <div class="tips-arrow"></div>
                     <ul class="tips-inner">
-                        <li>菜单</li>
-                        <li>标签</li>
+                        <li>Menu</li>
+                        <li>Tags</li>
                         
-                        <li>友情链接</li>
+                        <li>Friends</li>
                         
                         
-                        <li>关于我</li>
+                        <li>About Me</li>
                         
                     </ul>
                 </div>
@@ -255,7 +255,7 @@
             </nav>
         </header>                
     </div>
-    <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
+    <link class="menu-list" tags="Tags" friends="Friends" about="About Me"/>
 </nav>
       <div class="body-wrap"><article id="post-python-learning" class="article article-type-post" itemscope itemprop="blogPost">
   
@@ -395,7 +395,41 @@
 <hr>
 <h3 id="函数的参数"><a href="#函数的参数" class="headerlink" title="函数的参数"></a>函数的参数</h3><h4 id="位置参数"><a href="#位置参数" class="headerlink" title="位置参数"></a>位置参数</h4><p>power(x)函数，参数x就是一个位置参数</p>
 <h4 id="默认参数"><a href="#默认参数" class="headerlink" title="默认参数"></a>默认参数</h4><p>power(x, n=2)【必须是必选参数在前，默认参数在后】【有多个参数时，把变化大的参数放前面，变化小的参数放后面。变化小的参数就可以作为默认参数】</p>
-<h4 id="可变参数"><a href="#可变参数" class="headerlink" title="可变参数"></a>可变参数</h4><p>举例：<br>        def calc(numbers):<br>            sum = 0<br>            for n in numbers:<br>                sum = sum + n * n<br>            return sum</p>
+<h4 id="可变参数"><a href="#可变参数" class="headerlink" title="可变参数"></a>可变参数</h4><p>举例：<br>        def calc(<em>numbers):<br>            sum = 0<br>            for n in numbers:<br>                sum = sum + n </em> n<br>            return sum</p>
+<ol>
+<li>定义可变参数和定义一个list或tuple参数相比，仅仅在参数前面加了一个*号。在函数内部，参数numbers接收到的是一个tuple，因此，函数代码完全不变。但是，调用该函数时，可以传入任意个参数，包括0个参数：【calc(1, 2)、calc()】。</li>
+<li>*nums表示把nums这个list的所有元素作为可变参数传进去。这种写法相当有用，而且很常见。</li>
+</ol>
+<h4 id="关键字参数"><a href="#关键字参数" class="headerlink" title="关键字参数"></a>关键字参数</h4><p>关键字参数允许你传入0个或任意个含参数名的参数，这些关键字参数在函数内部自动组装为一个dict</p>
+<p>=================================================================================================</p>
+<p>函数参数小结：</p>
+<ul>
+<li><p>Python的函数具有非常灵活的参数形态，既可以实现简单的调用，又可以传入非常复杂的参数。</p>
+</li>
+<li><p>默认参数一定要用不可变对象，如果是可变对象，程序运行时会有逻辑错误！</p>
+</li>
+<li><p>要注意定义可变参数和关键字参数的语法：</p>
+</li>
+<li><p>*args是可变参数，args接收的是一个tuple；</p>
+</li>
+<li><p>**kw是关键字参数，kw接收的是一个dict。</p>
+</li>
+<li><p>以及调用函数时如何传入可变参数和关键字参数的语法：</p>
+</li>
+<li><p>可变参数既可以直接传入：func(1, 2, 3)，又可以先组装list或tuple，再通过<em>args传入：func(</em>(1, 2, 3))；</p>
+</li>
+<li><p>关键字参数既可以直接传入：func(a=1, b=2)，又可以先组装dict，再通过<strong>kw传入：func(</strong>{‘a’: 1, ‘b’: 2})。</p>
+</li>
+<li><p>使用<em>args和*</em>kw是Python的习惯写法，当然也可以用其他参数名，但最好使用习惯用法。</p>
+</li>
+<li><p>命名的关键字参数是为了限制调用者可以传入的参数名，同时可以提供默认值。</p>
+</li>
+<li><p>定义命名的关键字参数在没有可变参数的情况下不要忘了写分隔符*，否则定义的将是位置参数。</p>
+</li>
+</ul>
+<p>=================================================================================================</p>
+<hr>
+<p>###递归函数</p>
 
       
     </div>
@@ -404,17 +438,17 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2017/04/20/python-learning/">Python 学习笔记</a></p>
-        <p><span>文章作者:</span><a href="/" title="回到主页">Almira  song</a></p>
-        <p><span>发布时间:</span>2017-04-20, 18:10:15</p>
-        <p><span>最后更新:</span>2017-04-21, 11:35:18</p>
+        <p><span>Title:</span><a href="/2017/04/20/python-learning/">Python 学习笔记</a></p>
+        <p><span>Author:</span><a href="/" title="Back to Homepage">Almira  song</a></p>
+        <p><span>Created:</span>2017-04-20, 18:10:15</p>
+        <p><span>Updated:</span>2017-04-21, 14:58:28</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2017/04/20/python-learning/" title="Python 学习笔记">http://yoursite.com/2017/04/20/python-learning/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2017/04/20/python-learning/　　作者: Almira  song" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>Full URL:</span><a class="post-url" href="/2017/04/20/python-learning/" title="Python 学习笔记">http://yoursite.com/2017/04/20/python-learning/</a>
+            <span class="copy-path" data-clipboard-text="From http://yoursite.com/2017/04/20/python-learning/　　By Almira  song" title="Copy Article&#39;s Link &amp; Author"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
-            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
+            <span>License:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"CC BY-NC-SA 4.0"</a> Keep Link &amp; Author if Distribute.
         </p>
     </div>
 
@@ -435,9 +469,9 @@
 </article>
 
     <div id="toc" class="toc-article">
-        <strong class="toc-title">文章目录</strong>
+        <strong class="toc-title">Contents</strong>
         
-            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Python基础"><span class="toc-number">1.</span> <span class="toc-text">Python基础</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#数据类型和变量"><span class="toc-number">1.1.</span> <span class="toc-text">数据类型和变量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#字符串和编码"><span class="toc-number">1.2.</span> <span class="toc-text">字符串和编码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#使用list和tuple"><span class="toc-number">1.3.</span> <span class="toc-text">使用list和tuple</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#List"><span class="toc-number">1.3.1.</span> <span class="toc-text">List</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Tuple"><span class="toc-number">1.3.2.</span> <span class="toc-text">Tuple</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#条件判断"><span class="toc-number">1.4.</span> <span class="toc-text">条件判断</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#循环"><span class="toc-number">1.5.</span> <span class="toc-text">循环</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#for…in循环"><span class="toc-number">1.5.0.1.</span> <span class="toc-text">for…in循环</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#while循环"><span class="toc-number">1.5.1.</span> <span class="toc-text">while循环</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#使用dict和set"><span class="toc-number">1.6.</span> <span class="toc-text">使用dict和set</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#dict"><span class="toc-number">1.6.1.</span> <span class="toc-text">dict</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Set"><span class="toc-number">1.6.2.</span> <span class="toc-text">Set</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#函数"><span class="toc-number">2.</span> <span class="toc-text">函数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#调用函数"><span class="toc-number">2.1.</span> <span class="toc-text">调用函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#定义函数"><span class="toc-number">2.2.</span> <span class="toc-text">定义函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#函数的参数"><span class="toc-number">2.3.</span> <span class="toc-text">函数的参数</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#位置参数"><span class="toc-number">2.3.1.</span> <span class="toc-text">位置参数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#默认参数"><span class="toc-number">2.3.2.</span> <span class="toc-text">默认参数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#可变参数"><span class="toc-number">2.3.3.</span> <span class="toc-text">可变参数</span></a></li></ol></li></ol></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Python基础"><span class="toc-number">1.</span> <span class="toc-text">Python基础</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#数据类型和变量"><span class="toc-number">1.1.</span> <span class="toc-text">数据类型和变量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#字符串和编码"><span class="toc-number">1.2.</span> <span class="toc-text">字符串和编码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#使用list和tuple"><span class="toc-number">1.3.</span> <span class="toc-text">使用list和tuple</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#List"><span class="toc-number">1.3.1.</span> <span class="toc-text">List</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Tuple"><span class="toc-number">1.3.2.</span> <span class="toc-text">Tuple</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#条件判断"><span class="toc-number">1.4.</span> <span class="toc-text">条件判断</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#循环"><span class="toc-number">1.5.</span> <span class="toc-text">循环</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#for…in循环"><span class="toc-number">1.5.0.1.</span> <span class="toc-text">for…in循环</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#while循环"><span class="toc-number">1.5.1.</span> <span class="toc-text">while循环</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#使用dict和set"><span class="toc-number">1.6.</span> <span class="toc-text">使用dict和set</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#dict"><span class="toc-number">1.6.1.</span> <span class="toc-text">dict</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Set"><span class="toc-number">1.6.2.</span> <span class="toc-text">Set</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#函数"><span class="toc-number">2.</span> <span class="toc-text">函数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#调用函数"><span class="toc-number">2.1.</span> <span class="toc-text">调用函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#定义函数"><span class="toc-number">2.2.</span> <span class="toc-text">定义函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#函数的参数"><span class="toc-number">2.3.</span> <span class="toc-text">函数的参数</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#位置参数"><span class="toc-number">2.3.1.</span> <span class="toc-text">位置参数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#默认参数"><span class="toc-number">2.3.2.</span> <span class="toc-text">默认参数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#可变参数"><span class="toc-number">2.3.3.</span> <span class="toc-text">可变参数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#关键字参数"><span class="toc-number">2.3.4.</span> <span class="toc-text">关键字参数</span></a></li></ol></li></ol></li></ol>
         
     </div>
     <style>
@@ -451,10 +485,10 @@
         }
     </style>
 
-    <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+    <input type="button" id="tocButton" value="Hide"  title="Show or Hide Table of Contents">
 
     <script>
-        yiliaConfig.toc = ["隐藏目录", "显示目录", !!"false"];
+        yiliaConfig.toc = ["Hide", "Show", !!"false"];
     </script>
 
 
@@ -493,15 +527,15 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2017/04/20/test3/" title="上一篇: 仅仅是个测试页2">
+            <a href="/2017/04/20/test3/" title="Pre: 仅仅是个测试页2">
                 <i class="fa fa-angle-left"></i>
             </a>
         
 
-        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+        <a title="Mini Archives"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+            <a href="/" title="Back to Homepage"><i class="fa fa-home"></i></a>
         
     </div>
 
@@ -522,14 +556,14 @@
                 2016-2017 Almira  song
             </div>
             <div class="footer-right">
-                <a href="http://hexo.io/" target="_blank" title="快速、简洁且高效的博客框架">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="简而不减 Hexo 双栏博客主题  v3.5">Yelee</a> by MOxFIVE <i class="fa fa-heart animated infinite pulse"></i>
+                <a href="http://hexo.io/" target="_blank" title="A fast, simple &amp; powerful blog framework">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="Another simple and elegant theme for Hexo  v3.5">Yelee</a> by MOxFIVE <i class="fa fa-heart animated infinite pulse"></i>
             </div>
         </div>
         
             <div class="visit">
                 
                     <span id="busuanzi_container_site_pv" style='display:none'>
-                        <span id="site-visit" title="本站到访数"><i class="fa fa-user" aria-hidden="true"></i><span id="busuanzi_value_site_uv"></span>
+                        <span id="site-visit" title="Site Visitors"><i class="fa fa-user" aria-hidden="true"></i><span id="busuanzi_value_site_uv"></span>
                         </span>
                     </span>
                 
@@ -538,7 +572,7 @@
                 
                 
                     <span id="busuanzi_container_page_pv" style='display:none'>
-                        <span id="page-visit"  title="本页阅读量"><i class="fa fa-eye animated infinite pulse" aria-hidden="true"></i><span id="busuanzi_value_page_pv"></span>
+                        <span id="page-visit"  title="Page Hits"><i class="fa fa-eye animated infinite pulse" aria-hidden="true"></i><span id="busuanzi_value_page_pv"></span>
                         </span>
                     </span>
                 
@@ -571,9 +605,9 @@
 
 
 <div class="scroll" id="scroll">
-    <a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
-    <a href="#comments" onclick="load$hide();" title="查看评论"><i class="fa fa-comments-o"></i></a>
-    <a href="#footer" title="转到底部"><i class="fa fa-arrow-down"></i></a>
+    <a href="#" title="Back to Top"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments" onclick="load$hide();" title="Comments"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer" title="Go to Bottom"><i class="fa fa-arrow-down"></i></a>
 </div>
 <script>
     // Open in New Window
