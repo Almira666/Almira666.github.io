@@ -22,7 +22,7 @@
 <meta property="og:url" content="http://yoursite.com/2017/04/20/python-learning/index.html">
 <meta property="og:site_name" content="软件测试学习历程">
 <meta property="og:description" content="Python是用来编写应用程序的高级编程语言。举例：基本输入/输出：  print()在括号中加上字符串，就可以向屏幕上输出指定的文字。  input()可以让你显示一个字符串来提示用户（‘name=input(please enter your name:)’）">
-<meta property="og:updated_time" content="2017-04-21T03:04:27.000Z">
+<meta property="og:updated_time" content="2017-04-21T03:22:45.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python 学习笔记">
 <meta name="twitter:description" content="Python是用来编写应用程序的高级编程语言。举例：基本输入/输出：  print()在括号中加上字符串，就可以向屏幕上输出指定的文字。  input()可以让你显示一个字符串来提示用户（‘name=input(please enter your name:)’）">
@@ -384,6 +384,14 @@
 </code></pre> else:<pre><code>return -x
 </code></pre></li>
 <li>如果你已经把my_abs()的函数定义保存为abstest.py文件了，那么，可以在该文件的当前目录下启动Python解释器，用from abstest import my_abs来导入my_abs()函数，注意abstest是文件名（不含.py扩展名）        </li>
+<li>空函数，定义一个什么事也不做的空函数，可以用pass语句（pass可以用来作为占位符）：<pre><code>def nop():
+    pass
+</code></pre><h3 id="函数的参数"><a href="#函数的参数" class="headerlink" title="函数的参数"></a>函数的参数</h3><h4 id="位置参数"><a href="#位置参数" class="headerlink" title="位置参数"></a>位置参数</h4>power(x)函数，参数x就是一个位置参数<h4 id="默认参数"><a href="#默认参数" class="headerlink" title="默认参数"></a>默认参数</h4>power(x, n=2)【必须是必选参数在前，默认参数在后】【有多个参数时，把变化大的参数放前面，变化小的参数放后面。变化小的参数就可以作为默认参数】<h4 id="可变参数"><a href="#可变参数" class="headerlink" title="可变参数"></a>可变参数</h4>举例：<pre><code>def calc(numbers):
+    sum = 0
+    for n in numbers:
+        sum = sum + n * n
+    return sum
+</code></pre></li>
 </ol>
 
       
@@ -396,7 +404,7 @@
         <p><span>Title:</span><a href="/2017/04/20/python-learning/">Python 学习笔记</a></p>
         <p><span>Author:</span><a href="/" title="Back to Homepage">Almira  song</a></p>
         <p><span>Created:</span>2017-04-20, 18:10:15</p>
-        <p><span>Updated:</span>2017-04-21, 11:04:27</p>
+        <p><span>Updated:</span>2017-04-21, 11:22:45</p>
         <p>
             <span>Full URL:</span><a class="post-url" href="/2017/04/20/python-learning/" title="Python 学习笔记">http://yoursite.com/2017/04/20/python-learning/</a>
             <span class="copy-path" data-clipboard-text="From http://yoursite.com/2017/04/20/python-learning/　　By Almira  song" title="Copy Article&#39;s Link &amp; Author"><i class="fa fa-clipboard"></i></span>
@@ -426,7 +434,7 @@
     <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Python基础"><span class="toc-number">1.</span> <span class="toc-text">Python基础</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#数据类型和变量"><span class="toc-number">1.1.</span> <span class="toc-text">数据类型和变量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#字符串和编码"><span class="toc-number">1.2.</span> <span class="toc-text">字符串和编码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#使用list和tuple"><span class="toc-number">1.3.</span> <span class="toc-text">使用list和tuple</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#List"><span class="toc-number">1.3.1.</span> <span class="toc-text">List</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Tuple"><span class="toc-number">1.3.2.</span> <span class="toc-text">Tuple</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#条件判断"><span class="toc-number">1.4.</span> <span class="toc-text">条件判断</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#循环"><span class="toc-number">1.5.</span> <span class="toc-text">循环</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#for…in循环"><span class="toc-number">1.5.0.1.</span> <span class="toc-text">for…in循环</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#while循环"><span class="toc-number">1.5.1.</span> <span class="toc-text">while循环</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#使用dict和set"><span class="toc-number">1.6.</span> <span class="toc-text">使用dict和set</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#dict"><span class="toc-number">1.6.1.</span> <span class="toc-text">dict</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#set"><span class="toc-number">1.6.2.</span> <span class="toc-text">set</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#函数"><span class="toc-number">2.</span> <span class="toc-text">函数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#调用函数"><span class="toc-number">2.1.</span> <span class="toc-text">调用函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#定义函数"><span class="toc-number">2.2.</span> <span class="toc-text">定义函数</span></a></li></ol></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Python基础"><span class="toc-number">1.</span> <span class="toc-text">Python基础</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#数据类型和变量"><span class="toc-number">1.1.</span> <span class="toc-text">数据类型和变量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#字符串和编码"><span class="toc-number">1.2.</span> <span class="toc-text">字符串和编码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#使用list和tuple"><span class="toc-number">1.3.</span> <span class="toc-text">使用list和tuple</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#List"><span class="toc-number">1.3.1.</span> <span class="toc-text">List</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Tuple"><span class="toc-number">1.3.2.</span> <span class="toc-text">Tuple</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#条件判断"><span class="toc-number">1.4.</span> <span class="toc-text">条件判断</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#循环"><span class="toc-number">1.5.</span> <span class="toc-text">循环</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#for…in循环"><span class="toc-number">1.5.0.1.</span> <span class="toc-text">for…in循环</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#while循环"><span class="toc-number">1.5.1.</span> <span class="toc-text">while循环</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#使用dict和set"><span class="toc-number">1.6.</span> <span class="toc-text">使用dict和set</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#dict"><span class="toc-number">1.6.1.</span> <span class="toc-text">dict</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#set"><span class="toc-number">1.6.2.</span> <span class="toc-text">set</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#函数"><span class="toc-number">2.</span> <span class="toc-text">函数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#调用函数"><span class="toc-number">2.1.</span> <span class="toc-text">调用函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#定义函数"><span class="toc-number">2.2.</span> <span class="toc-text">定义函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#函数的参数"><span class="toc-number">2.3.</span> <span class="toc-text">函数的参数</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#位置参数"><span class="toc-number">2.3.1.</span> <span class="toc-text">位置参数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#默认参数"><span class="toc-number">2.3.2.</span> <span class="toc-text">默认参数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#可变参数"><span class="toc-number">2.3.3.</span> <span class="toc-text">可变参数</span></a></li></ol></li></ol></li></ol>
         
     </div>
     <style>
